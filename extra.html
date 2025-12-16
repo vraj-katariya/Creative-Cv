@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vraj Katariya | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        
+        .nav-links li a:hover {
+            color: #6bcf9b;
+        }
+        
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 60, 50, 0.75), rgba(0, 60, 50, 0.75));
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .profile-wrap {
+            width: 160px;
+            height: 160px;
+            margin: auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content h1 {
+            font-size: 42px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .hero-content p {
+            font-size: 14px;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+        
+        .buttons {
+            margin-top: 30px;
+        }
+        
+        .btn {
+            text-decoration: none;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        
+        .primary {
+            background: #4CAF50;
+            color: #fff;
+        }
+        
+        .secondary {
+            background: #3f6f6b;
+            color: #fff;
+        }
+        
+        .btn:hover {
+            opacity: 0.85;
+        }
+        
+        .social-icons {
+            margin-top: 40px;
+        }
+        
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: #9e9e9e;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: #4CAF50;
+        }
+        
+        body {
+            background: #f5f5f5;
+        }
+        
+        .about-section {
+            padding: 60px 0;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            display: flex;
+            gap: 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-left {
+            flex: 1;
+        }
+        
+        .about-left h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .about-left p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .about-left a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .about-right {
+            flex: 1;
+        }
+        
+        .about-right h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .info {
+            display: flex;
+            margin-bottom: 12px;
+        }
+        
+        .info span {
+            width: 120px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .info p {
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">VK</div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="profile-wrap">
+                <img src="vraj.png" alt="Profile" class="profile-img">
+            </div>
+
+            <h1>VRAJ KATARIYA</h1>
+            <p>WEB DEVELOPER, GRAPHIC DESIGNER, PHOTOGRAPHER</p>
+
+            <div class="buttons">
+                <a class="btn primary">Hire Me</a>
+                <a class="btn secondary" style="background-color: rgb(72, 162, 72);">Download CV</a>
+            </div>
+
+            <div class="social-icons">
+                <a><i class="fab fa-facebook-f"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-instagram"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container">
+
+            <div class="about-left">
+                <h2>About</h2>
+                <p>
+                    Hello! I am VRAJ KATARIYA. Web Developer, Graphic Designer and Photographer.
+                </p>
+                <p>
+                    VK is a HTML resume template for professionals. focus on technical skills, personal projects, education, and relevant soft skills, using a clean, one-page format.
+                    <a href="#">Learn More</a>
+                </p>
+            </div>
+
+            <div class="about-right">
+                <h2>Basic Information</h2>
+
+                <div class="info">
+                    <span>AGE:</span>
+                    <p>20</p>
+                </div>
+
+                <div class="info">
+                    <span>EMAIL:</span>
+                    <p>vrajkatariya2006@company.com</p>
+                </div>
+
+                <div class="info">
+                    <span>PHONE:</span>
+                    <p>8733848663</p>
+                </div>
+
+                <div class="info">
+                    <span>ADDRESS:</span>
+                    <p>A-173 Shiv Chhaya Society Ved Road Surat in India</p>
+                </div>
+
+                <div class="info">
+                    <span>LANGUAGE:</span>
+                    <p>English,Gujarati</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
