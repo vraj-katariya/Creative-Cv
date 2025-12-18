@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vraj Katariya | Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: #f5f5f5;
+            background-image: url("images/vraj.png");
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(0, 60, 50, 0.9);
+        }
+        
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        
+        .nav-links li a:hover {
+            color: #6bcf9b;
+        }
+        
+        section {
+            scroll-margin-top: 80px;
+        }
+        
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 60, 50, 0.75), rgba(0, 60, 50, 0.75)), url('bg.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .profile-wrap {
+            width: 160px;
+            height: 160px;
+            margin: auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content h1 {
+            font-size: 42px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .hero-content p {
+            font-size: 14px;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+        
+        .buttons {
+            margin-top: 30px;
+        }
+        
+        .btn {
+            text-decoration: none;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .primary {
+            background: #4CAF50;
+            color: #fff;
+        }
+        
+        .secondary {
+            background: #3f6f6b;
+            color: #fff;
+        }
+        
+        .btn:hover {
+            opacity: 0.85;
+        }
+        
+        .social-icons {
+            margin-top: 40px;
+        }
+        
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: #9e9e9e;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: #4CAF50;
+        }
+        
+        .about-section {
+            padding: 60px 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            display: flex;
+            gap: 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-left {
+            flex: 1;
+        }
+        
+        .about-left h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .about-left p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .about-left a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .about-right {
+            flex: 1;
+        }
+        
+        .about-right h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .info {
+            display: flex;
+            margin-bottom: 12px;
+        }
+        
+        .info span {
+            width: 120px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .info p {
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        
+        .skills-section-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        
+        .skills-container {
+            width: 100%;
+            max-width: 1100px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .skills-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .skill-box {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: #6c757d;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+        .progress-bar-bg {
+            width: 100%;
+            height: 5px;
+            background-color: #dbece2;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #2e7d32;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .skills-card {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .portfolio {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .portfolio h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #222;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .item {
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+        
+        .item img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .item p {
+            margin-top: 15px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .item:hover {
+            transform: translateY(-8px);
+        }
+        
+        @media (max-width: 900px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .experience {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .experience h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #222;
+        }
+        
+        .exp-card {
+            display: flex;
+            background: #fff;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .exp-left {
+            width: 280px;
+            background: #3c8c3c;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .exp-left .date {
+            font-size: 12px;
+            display: block;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .exp-left h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .exp-right {
+            padding: 25px 30px;
+            flex: 1;
+        }
+        
+        .exp-right h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .exp-right p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .exp-card {
+                flex-direction: column;
+            }
+            .exp-left {
+                width: 100%;
+            }
+        }
+        
+        .contact-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+        
+        .contact-title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #1f2d3d;
+        }
+        
+        .contact-subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-box h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1f2d3d;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 8px;
+        }
+        
+        .info-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .info-item i {
+            font-size: 20px;
+            color: #4caf50;
+            min-width: 30px;
+            margin-top: 3px;
+        }
+        
+        .info-item p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .contact-form label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+            font-weight: 500;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .contact-form textarea {
+            resize: none;
+            height: 120px;
+        }
+        
+        .contact-form button {
+            background: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-form button i {
+            margin-right: 8px;
+        }
+        
+        .contact-form button:hover {
+            background: #43a047;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            .header {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            .hero-content h1 {
+                font-size: 32px;
+            }
+        }
+        
+        .footer {
+            background: #0d2c24;
+            color: #fff;
+            padding-top: 60px;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding: 0 20px;
+        }
+        
+        .footer-section {
+            padding: 0 10px;
+        }
+        
+        .footer-logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .footer-tagline {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .social-icon:hover {
+            background: #4CAF50;
+            transform: translateY(-3px);
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            position: relative;
+            font-weight: 600;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: #4CAF50;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: #4CAF50;
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .contact-item i {
+            color: #4CAF50;
+            margin-top: 3px;
+            font-size: 16px;
+            min-width: 20px;
+        }
+        
+        .footer-bottom {
+            background: #0a221c;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .copyright {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .footer-legal {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .legal-link {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .legal-link:hover {
+            color: #4CAF50;
+        }
+        
+        @media (max-width: 992px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+            .footer-section {
+                padding: 0;
+            }
+            .footer-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .footer-social {
+                justify-content: center;
+            }
+            .contact-item {
+                justify-content: center;
+                text-align: left;
+            }
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .footer-legal {
+                justify-content: center;
+            }
+            .footer-links a:hover {
+                padding-left: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer {
+                padding-top: 40px;
+            }
+            .footer-logo {
+                font-size: 32px;
+            }
+            .footer-title {
+                font-size: 16px;
+            }
+            .social-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+            }
+            .footer-legal {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">VK Identity</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="profile-wrap">
+                <img src="vraj.png" alt="Profile" class="profile-img">
+            </div>
+
+            <h1>VRAJ KATARIYA</h1>
+            <p>WEB DEVELOPER, GRAPHIC DESIGNER, PHOTOGRAPHER</p>
+
+            <div class="buttons">
+                <button class="btn primary" onclick="scrollToContact()">Hire Me</button>
+                <button class="btn secondary" style="background-color: rgba(59, 218, 59, 0.844);">Download CV</button>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-left">
+                <h2>About</h2>
+                <p>
+                    Hello! I am VRAJ KATARIYA. Web Developer, Graphic Designer and Photographer.
+                </p>
+                <p>
+                    VK is a HTML resume template for professionals. focus on technical skills, personal projects, education, and relevant soft skills, using a clean, one-page format.
+                    <a href="#">Learn More</a>
+                </p>
+            </div>
+
+            <div class="about-right">
+                <h2>Basic Information</h2>
+
+                <div class="info">
+                    <span>AGE:</span>
+                    <p>20</p>
+                </div>
+
+                <div class="info">
+                    <span>EMAIL:</span>
+                    <p>vrajkatariya2006@company.com</p>
+                </div>
+
+                <div class="info">
+                    <span>PHONE:</span>
+                    <p>8733848663</p>
+                </div>
+
+                <div class="info">
+                    <span>ADDRESS:</span>
+                    <p>A-173 Shiv Chhaya Society Ved Road Surat in India</p>
+                </div>
+
+                <div class="info">
+                    <span>LANGUAGE:</span>
+                    <p>English,Gujarati</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section-wrapper" id="skills">
+        <div class="skills-container">
+            <h2 class="section-title">Professional Skills</h2>
+
+            <div class="skills-card">
+                <div class="skills-column">
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <span class="skill-name">JAVASCRIPT</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <span class="skill-name">BOOTSTRAP</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-column">
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <span class="skill-name">SASS</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <span class="skill-name">PHOTOSHOP</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+
+        <div class="portfolio-grid">
+            <div class="item">
+                <img src="p1.webp" alt="Image 1">
+                <p>Building Modern & Responsive Websites</p>
+            </div>
+
+            <div class="item">
+                <img src="p2.jpg" alt="Image 2">
+                <p>Creative and Professional Design Work</p>
+            </div>
+
+            <div class="item">
+                <img src="p3.jpg" alt="Image 3">
+                <p>Capturing Moments, Creating Memories</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <h2>Work Experience</h2>
+
+        <div class="exp-card">
+            <div class="exp-left">
+                <span class="date">JULY-2024 </PRESENTspan>
+                <h3>Web Development Trainee</h3>
+            </div>
+            <div class="exp-right">
+                <h4>Front End Developer</h4>
+                <p>
+                    Designed and developed responsive websites using HTML, CSS, JavaScript Created personal portfolio website using modern UI design Worked on college mini projects and practical assignments Learned GitHub, hosting (GitHub Pages) and basic deployment Focused
+                    on clean code and mobile-friendly layouts.
+                </p>
+            </div>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-left">
+                <span class="date">APRIl 2024 - DECEMBER 2025</span>
+                <h3>Web Development Intern (Student)</h3>
+            </div>
+            <div class="exp-right">
+                <h4>Web Developer</h4>
+                <p>
+                    Assisted in developing front-end layouts using HTML & CSS Learned JavaScript basics and website structure Gained experience in teamwork and project workflow
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h1 class="contact-title">Contact Me</h1>
+        <p class="contact-subtitle">
+            Have a project in mind or want to discuss potential opportunities? Feel free to get in touch with me. I'm always open to new challenges and collaborations.
+        </p>
+
+        <div class="contact-container">
+            <div class="contact-box">
+                <h3>Get In Touch</h3>
+
+                <div class="info-item">
+                    <i class="fas fa-location-dot"></i>
+                    <p>
+                        A-173 Shiv Chhaya Society<br> Ved Road, Surat<br> Gujarat, India - 395004
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 87338 48663</p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>
+                        vrajkatariya2006@gmail.com<br> vraj.katariya@company.com
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p>
+                        Monday - Friday: 9 AM - 6 PM<br> Weekends: Available for urgent projects
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <h3>Send Message</h3>
+
+                <form class="contact-form">
+                    <label>Full Name *</label>
+                    <input type="text" placeholder="Enter your full name" required>
+
+                    <label>Email Address *</label>
+                    <input type="email" placeholder="Enter your email address" required>
+
+                    <label>Subject</label>
+                    <input type="text" placeholder="What is this regarding?">
+
+                    <label>Message *</label>
+                    <textarea placeholder="Tell me about your project or inquiry..." required></textarea>
+
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-logo">VK Identity</h3>
+                <p class="footer-tagline">Crafting digital experiences with passion and precision.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-title">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Photography</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-title">Contact Info</h4>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>vrajkatariya2006@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 87338 48663</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Surat, Gujarat, India</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">© 2025 Vraj Katariya. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a>Privacy Policy</a>
+                    <a>Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
